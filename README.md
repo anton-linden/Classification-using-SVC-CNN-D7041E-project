@@ -19,10 +19,11 @@ Run the code with even numbers for the amount of data. Maximum amount of data po
 
 
 ## Requirements & Versions
-Python: 3.10
-Tensorflow: 2.9.2
-Matplotlib: 3.6.2
-Opencv-python: 4.6.0.66
+
+ - Python: 3.10
+ - Tensorflow: 2.9.2
+ - Matplotlib: 3.6.2
+ - Opencv-python: 4.6.0.66
 
 ## Data sets
 Cifar 10 dataset from Keras: https://keras.io/api/datasets/cifar10/
