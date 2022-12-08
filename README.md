@@ -16,6 +16,9 @@ Simply run `run_multiple_times(_runs=1, _amount_of_data=50000, _epochs=10)` with
 Run the code with even numbers for the amount of data. Maximum amount of data possible: 50000. Maximum testdata: 10000.
 
 ### How to run SVC.ipyn
+Simply run `run_multiple_times(_runs=1, _amount_of_data=500, _use_optimization=True)`with your wanted parameters. This automatically runs an 80/20 split of the dataset. This line of code is found in the bottom of the file.
+
+Run the code with even numbers for the amount of data. Maximum amount of data possible: 50000. Maximum testdata: 10000. Minimum data: 130.
 
 
 ## Requirements & Versions
@@ -58,3 +61,40 @@ SVC takes a lot of computational power. Running the maximum set without grid sea
 Avoid running grid search with large data amounts, this takes a lot of power and should require a dedicated server rather than a normal desktop computer.
 
 A good amount of data points is around 1000-5000 for running multiple tests. However if the amount of data is that small, a great result can't be expected and a lot of variation can occur. An average over multiple runs would be best, but is very computational expensive.
+
+## CNN different Optimizers 
+We tried using 5 different optimizers for our CNN where we found that Adamax and Adam where the best performing once. The optimizers tested where Adam. Adamax, SGD, Adadelta and Ftrl with the following results using 50k data and 10 epochs 
+
+| Optimizers | Accuracy |
+|--|--|
+| Adam  | 70.3% |
+| Adamax | 70.69% |
+| SGD | 57.49% |
+| Adadelta | 13.26% |
+| Ftrl | 10% |
+
+There are other optimizers available you can find them at: **[https://www.tensorflow.org/api_docs/python/tf/keras/optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)**
+
+## CNN different activation functions 
+We also tried different activation functions on our CNN model where all tests ran with 50 000 data points, 10 epochs and the optimizer "Adam". The functions we tried where Relu, Gelu and Sigmoid. As a result Relu and Gelu preformed the best.
+
+| Activation functions | Accuracy |
+|--|--|
+| Relu | 70% |
+| Gelu | 71% |
+| Sigmoid | 10% |
+
+There are other functions available you can find at: **[https://www.tensorflow.org/api_docs/python/tf/keras/activations](https://www.tensorflow.org/api_docs/python/tf/keras/activations)**
+ 
+## CNN Run with/without Dropout
+We also ran our network with dropout to reduce the overfitting in the model. We ran with 0.4 dropout we did not get a increase in overall accuracy. We can see that the graph showing the run with droput has the accuracy closer to the val_acuraccy. 
+
+## Graphs from the CNN runs
+### Without Dropout
+![enter image description here](https://raw.githubusercontent.com/anton-linden/D7041E-project/main/Resources/without-dropout.png)
+
+### With Dropout
+![enter image description here](https://raw.githubusercontent.com/anton-linden/D7041E-project/main/Resources/with-dropout.png)
+
+## Results
+![enter image description here](https://raw.githubusercontent.com/anton-linden/D7041E-project/main/Resources/Results.png)
