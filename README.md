@@ -4,6 +4,9 @@
 This project is a mini project for the course D7041E at LTU during winter 2022. The project was created by Anton L, Birger W & Joakim VL.
 The goal of the project is to train and classifify 10 different classes using SVC and CNN.
 
+## Video on project
+We have recorded a video on the project and uploaded it to YouTube. [SVM & CNN classification - Mini project video](https://www.youtube.com/watch?v=U8McGZN05Fg)
+
 ## What is included in the project
 The project consists of two [Jupyter Notebooks](https://jupyter.org/) files. 
 
